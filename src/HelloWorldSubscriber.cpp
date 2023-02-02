@@ -171,6 +171,11 @@ public:
     bool init()
     {
         DomainParticipantQos participantQos;
+        // add for video begin
+        // Increase the receiving buffer size
+        participantQos.transport().listen_socket_buffer_size = 12582912;
+        participantQos.wire_protocol().builtin.discovery_config.leaseDuration = eprosima::fastrtps::c_TimeInfinite;
+        // add for video end
         participantQos.name("Participant_subscriber");
         participant_ = DomainParticipantFactory::get_instance()->create_participant(0, participantQos);
 
@@ -199,7 +204,22 @@ public:
         }
 
         // Create the DataReader
-        reader_ = subscriber_->create_datareader(topic_, DATAREADER_QOS_DEFAULT, &listener_);
+        // add for video begin
+
+        // - Multimedia feed
+        // Audio and Video transmission have a common characteristic: Having a stable, high datarate feed is more important than having a 100% lossless transmission.
+        // Reliability: Best-Effort. We want to have a fast transmission. If a sample is lost, it can be recovered via error-correcting algorithms.
+        // Durability: Volatile. We do not mind data from the past, we want to stream what is happening in the present.
+        // History: Keep-Last with Low Depth. Once displayed or recorded on the receiving application, they are not needed in the History.
+        // note: In the case of video, depth can be as low as 1. A missing sample of a 50 frames per second stream represents virtually no information loss. 
+
+        DataReaderQos rqos;
+        rqos.history().kind = KEEP_LAST_HISTORY_QOS;
+        rqos.durability().kind = VOLATILE_DURABILITY_QOS;
+        rqos.reliability().kind = BEST_EFFORT_RELIABILITY_QOS;
+        rqos.history().depth =  1;
+        // add for video end
+        reader_ = subscriber_->create_datareader(topic_, rqos, &listener_);
 
         if (reader_ == nullptr)
         {
@@ -269,6 +289,7 @@ int main(
             std::vector<uchar> decode;
 
             int n = recvfrom(m_sockClient, buf, imgSize, 0,(struct sockaddr *)&addr_client, (socklen_t *)&len);//接受缓存
+            std::cout << n << std::endl;
             int pos = 0;
             while (pos < n)
             {
