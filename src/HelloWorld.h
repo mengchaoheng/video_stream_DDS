@@ -168,56 +168,6 @@ public:
      */
     eProsima_user_DllExport std::string& message();
     /*!
-     * @brief This function copies the value in member file_path
-     * @param _file_path New value to be copied in member file_path
-     */
-    eProsima_user_DllExport void file_path(
-            const std::array<char, 10>& _file_path);
-
-    /*!
-     * @brief This function moves the value in member file_path
-     * @param _file_path New value to be moved in member file_path
-     */
-    eProsima_user_DllExport void file_path(
-            std::array<char, 10>&& _file_path);
-
-    /*!
-     * @brief This function returns a constant reference to member file_path
-     * @return Constant reference to member file_path
-     */
-    eProsima_user_DllExport const std::array<char, 10>& file_path() const;
-
-    /*!
-     * @brief This function returns a reference to member file_path
-     * @return Reference to member file_path
-     */
-    eProsima_user_DllExport std::array<char, 10>& file_path();
-    /*!
-     * @brief This function copies the value in member image_data
-     * @param _image_data New value to be copied in member image_data
-     */
-    eProsima_user_DllExport void image_data(
-            const std::vector<char>& _image_data);
-
-    /*!
-     * @brief This function moves the value in member image_data
-     * @param _image_data New value to be moved in member image_data
-     */
-    eProsima_user_DllExport void image_data(
-            std::vector<char>&& _image_data);
-
-    /*!
-     * @brief This function returns a constant reference to member image_data
-     * @return Constant reference to member image_data
-     */
-    eProsima_user_DllExport const std::vector<char>& image_data() const;
-
-    /*!
-     * @brief This function returns a reference to member image_data
-     * @return Reference to member image_data
-     */
-    eProsima_user_DllExport std::vector<char>& image_data();
-    /*!
      * @brief This function sets a value in member size
      * @param _size New value for member size
      */
@@ -323,8 +273,6 @@ private:
 
     uint32_t m_index;
     std::string m_message;
-    std::array<char, 10> m_file_path;
-    std::vector<char> m_image_data;
     uint32_t m_size;
     std::vector<uint8_t> m_picture;
 };

@@ -36,17 +36,13 @@ using namespace eprosima::fastcdr::exception;
 
 HelloWorld::HelloWorld()
 {
-    // m_index com.eprosima.idl.parser.typecode.PrimitiveTypeCode@184f6be2
+    // m_index com.eprosima.idl.parser.typecode.PrimitiveTypeCode@10bbd20a
     m_index = 0;
-    // m_message com.eprosima.idl.parser.typecode.StringTypeCode@56aac163
+    // m_message com.eprosima.idl.parser.typecode.StringTypeCode@48503868
     m_message ="";
-    // m_file_path com.eprosima.idl.parser.typecode.ArrayTypeCode@1f7030a6
-    memset(&m_file_path, 0, (10) * 1);
-    // m_image_data com.eprosima.idl.parser.typecode.SequenceTypeCode@5a1c0542
-
-    // m_size com.eprosima.idl.parser.typecode.PrimitiveTypeCode@396f6598
+    // m_size com.eprosima.idl.parser.typecode.PrimitiveTypeCode@6895a785
     m_size = 0;
-    // m_picture com.eprosima.idl.parser.typecode.SequenceTypeCode@394e1a0f
+    // m_picture com.eprosima.idl.parser.typecode.SequenceTypeCode@184f6be2
 
 
 }
@@ -57,8 +53,6 @@ HelloWorld::~HelloWorld()
 
 
 
-
-
 }
 
 HelloWorld::HelloWorld(
@@ -66,8 +60,6 @@ HelloWorld::HelloWorld(
 {
     m_index = x.m_index;
     m_message = x.m_message;
-    m_file_path = x.m_file_path;
-    m_image_data = x.m_image_data;
     m_size = x.m_size;
     m_picture = x.m_picture;
 }
@@ -77,8 +69,6 @@ HelloWorld::HelloWorld(
 {
     m_index = x.m_index;
     m_message = std::move(x.m_message);
-    m_file_path = std::move(x.m_file_path);
-    m_image_data = std::move(x.m_image_data);
     m_size = x.m_size;
     m_picture = std::move(x.m_picture);
 }
@@ -89,8 +79,6 @@ HelloWorld& HelloWorld::operator =(
 
     m_index = x.m_index;
     m_message = x.m_message;
-    m_file_path = x.m_file_path;
-    m_image_data = x.m_image_data;
     m_size = x.m_size;
     m_picture = x.m_picture;
 
@@ -103,8 +91,6 @@ HelloWorld& HelloWorld::operator =(
 
     m_index = x.m_index;
     m_message = std::move(x.m_message);
-    m_file_path = std::move(x.m_file_path);
-    m_image_data = std::move(x.m_image_data);
     m_size = x.m_size;
     m_picture = std::move(x.m_picture);
 
@@ -115,7 +101,7 @@ bool HelloWorld::operator ==(
         const HelloWorld& x) const
 {
 
-    return (m_index == x.m_index && m_message == x.m_message && m_file_path == x.m_file_path && m_image_data == x.m_image_data && m_size == x.m_size && m_picture == x.m_picture);
+    return (m_index == x.m_index && m_message == x.m_message && m_size == x.m_size && m_picture == x.m_picture);
 }
 
 bool HelloWorld::operator !=(
@@ -134,15 +120,6 @@ size_t HelloWorld::getMaxCdrSerializedSize(
 
 
     current_alignment += 4 + eprosima::fastcdr::Cdr::alignment(current_alignment, 4) + 255 + 1;
-
-    current_alignment += ((10) * 1) + eprosima::fastcdr::Cdr::alignment(current_alignment, 1);
-
-
-    current_alignment += 4 + eprosima::fastcdr::Cdr::alignment(current_alignment, 4);
-
-    current_alignment += (100 * 1) + eprosima::fastcdr::Cdr::alignment(current_alignment, 1);
-
-
 
     current_alignment += 4 + eprosima::fastcdr::Cdr::alignment(current_alignment, 4);
 
@@ -170,20 +147,6 @@ size_t HelloWorld::getCdrSerializedSize(
 
     current_alignment += 4 + eprosima::fastcdr::Cdr::alignment(current_alignment, 4) + data.message().size() + 1;
 
-    if ((10) > 0)
-    {
-        current_alignment += ((10) * 1) + eprosima::fastcdr::Cdr::alignment(current_alignment, 1);
-    }
-
-    current_alignment += 4 + eprosima::fastcdr::Cdr::alignment(current_alignment, 4);
-
-    if (data.image_data().size() > 0)
-    {
-        current_alignment += (data.image_data().size() * 1) + eprosima::fastcdr::Cdr::alignment(current_alignment, 1);
-    }
-
-
-
     current_alignment += 4 + eprosima::fastcdr::Cdr::alignment(current_alignment, 4);
 
 
@@ -206,9 +169,6 @@ void HelloWorld::serialize(
 
     scdr << m_index;
     scdr << m_message.c_str();
-    scdr << m_file_path;
-
-    scdr << m_image_data;
     scdr << m_size;
     scdr << m_picture;
 
@@ -220,9 +180,6 @@ void HelloWorld::deserialize(
 
     dcdr >> m_index;
     dcdr >> m_message;
-    dcdr >> m_file_path;
-
-    dcdr >> m_image_data;
     dcdr >> m_size;
     dcdr >> m_picture;
 }
@@ -291,80 +248,6 @@ const std::string& HelloWorld::message() const
 std::string& HelloWorld::message()
 {
     return m_message;
-}
-/*!
- * @brief This function copies the value in member file_path
- * @param _file_path New value to be copied in member file_path
- */
-void HelloWorld::file_path(
-        const std::array<char, 10>& _file_path)
-{
-    m_file_path = _file_path;
-}
-
-/*!
- * @brief This function moves the value in member file_path
- * @param _file_path New value to be moved in member file_path
- */
-void HelloWorld::file_path(
-        std::array<char, 10>&& _file_path)
-{
-    m_file_path = std::move(_file_path);
-}
-
-/*!
- * @brief This function returns a constant reference to member file_path
- * @return Constant reference to member file_path
- */
-const std::array<char, 10>& HelloWorld::file_path() const
-{
-    return m_file_path;
-}
-
-/*!
- * @brief This function returns a reference to member file_path
- * @return Reference to member file_path
- */
-std::array<char, 10>& HelloWorld::file_path()
-{
-    return m_file_path;
-}
-/*!
- * @brief This function copies the value in member image_data
- * @param _image_data New value to be copied in member image_data
- */
-void HelloWorld::image_data(
-        const std::vector<char>& _image_data)
-{
-    m_image_data = _image_data;
-}
-
-/*!
- * @brief This function moves the value in member image_data
- * @param _image_data New value to be moved in member image_data
- */
-void HelloWorld::image_data(
-        std::vector<char>&& _image_data)
-{
-    m_image_data = std::move(_image_data);
-}
-
-/*!
- * @brief This function returns a constant reference to member image_data
- * @return Constant reference to member image_data
- */
-const std::vector<char>& HelloWorld::image_data() const
-{
-    return m_image_data;
-}
-
-/*!
- * @brief This function returns a reference to member image_data
- * @return Reference to member image_data
- */
-std::vector<char>& HelloWorld::image_data()
-{
-    return m_image_data;
 }
 /*!
  * @brief This function sets a value in member size
@@ -443,8 +326,6 @@ size_t HelloWorld::getKeyMaxCdrSerializedSize(
 
 
 
-
-
     return current_align;
 }
 
@@ -457,5 +338,5 @@ void HelloWorld::serializeKey(
         eprosima::fastcdr::Cdr& scdr) const
 {
     (void) scdr;
-          
+        
 }
