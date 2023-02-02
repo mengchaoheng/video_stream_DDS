@@ -2,6 +2,6 @@ struct HelloWorld
 {
     unsigned long index;
     string message;
-    char file_path[10];
-    sequence<char> image_data;
+    unsigned long size;
+    sequence<octet> picture;
 };

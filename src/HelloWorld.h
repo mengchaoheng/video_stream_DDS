@@ -217,6 +217,50 @@ public:
      * @return Reference to member image_data
      */
     eProsima_user_DllExport std::vector<char>& image_data();
+    /*!
+     * @brief This function sets a value in member size
+     * @param _size New value for member size
+     */
+    eProsima_user_DllExport void size(
+            uint32_t _size);
+
+    /*!
+     * @brief This function returns the value of member size
+     * @return Value of member size
+     */
+    eProsima_user_DllExport uint32_t size() const;
+
+    /*!
+     * @brief This function returns a reference to member size
+     * @return Reference to member size
+     */
+    eProsima_user_DllExport uint32_t& size();
+
+    /*!
+     * @brief This function copies the value in member picture
+     * @param _picture New value to be copied in member picture
+     */
+    eProsima_user_DllExport void picture(
+            const std::vector<uint8_t>& _picture);
+
+    /*!
+     * @brief This function moves the value in member picture
+     * @param _picture New value to be moved in member picture
+     */
+    eProsima_user_DllExport void picture(
+            std::vector<uint8_t>&& _picture);
+
+    /*!
+     * @brief This function returns a constant reference to member picture
+     * @return Constant reference to member picture
+     */
+    eProsima_user_DllExport const std::vector<uint8_t>& picture() const;
+
+    /*!
+     * @brief This function returns a reference to member picture
+     * @return Reference to member picture
+     */
+    eProsima_user_DllExport std::vector<uint8_t>& picture();
 
     /*!
      * @brief This function returns the maximum serialized size of an object
@@ -281,6 +325,8 @@ private:
     std::string m_message;
     std::array<char, 10> m_file_path;
     std::vector<char> m_image_data;
+    uint32_t m_size;
+    std::vector<uint8_t> m_picture;
 };
 
 #endif // _FAST_DDS_GENERATED_HELLOWORLD_H_

@@ -146,7 +146,7 @@ public:
         hello_.index(0);
         hello_.message("HelloWorld");
         
-        hello_.file_path().fill('A');
+        // hello_.file_path().fill('A');
         // std::array<char, 100> h{ "mmmmmmmmm" };
         // std::array<char, 100> a{ "apple" };
         // a = h;
@@ -229,18 +229,18 @@ public:
             uint32_t samples)
     {
         // send video begin
-        int m_sockClient;
-        if ((m_sockClient = socket(AF_INET, SOCK_DGRAM, 0)) < 0)    //创建socket句柄，采用UDP协议
-        {
-            printf("create socket error: %s(errno: %d)\n", strerror(errno), errno);
-            return;
-        }
-        sockaddr_in m_servaddr;
-        memset(&m_servaddr, 0, sizeof(m_servaddr));  //初始化结构体
-        m_servaddr.sin_family = AF_INET;           //设置通信方式
-        // m_servaddr.sin_port = htons(PORT_in);         //设置端口号
-        m_servaddr.sin_port   = htons(PORT_out);
-        m_servaddr.sin_addr.s_addr = htonl(INADDR_ANY);
+        // int m_sockClient;
+        // if ((m_sockClient = socket(AF_INET, SOCK_DGRAM, 0)) < 0)    //创建socket句柄，采用UDP协议
+        // {
+        //     printf("create socket error: %s(errno: %d)\n", strerror(errno), errno);
+        //     return;
+        // }
+        // sockaddr_in m_servaddr;
+        // memset(&m_servaddr, 0, sizeof(m_servaddr));  //初始化结构体
+        // m_servaddr.sin_family = AF_INET;           //设置通信方式
+        // // m_servaddr.sin_port = htons(PORT_in);         //设置端口号
+        // m_servaddr.sin_port   = htons(PORT_out);
+        // m_servaddr.sin_addr.s_addr = htonl(INADDR_ANY);
         //m_servaddr.sin_port = htons(8888);//设置需要发送的IP和端口号
 
         // bind(m_sockClient, (sockaddr*)&m_servaddr, sizeof(m_servaddr));//绑定端口号
@@ -279,11 +279,18 @@ public:
 
             //char encodeImg[426672];
 
-            int nSize = data_encode.size();
-
-            for (int i = 0; i < nSize; ++i) {
-                hello_.image_data().push_back(data_encode[i]);
+            std::vector<unsigned char> buffer;
+            if(!cv::imencode(".jpg", image, buffer)){
+                printf("Image encoding failed");
             }
+            hello_.size(buffer.size());
+            hello_.picture(buffer);
+
+            // int nSize = data_encode.size();
+
+            // for (int i = 0; i < nSize; ++i) {
+            //     hello_.picture().push_back(data_encode[i]);
+            // }
             // for (vector<int>::iterator iterator = hello_.image_data().begin(); iterator != hello_.image_data().end(); iterator++) {
             //     cout << *iterator << endl;
             // }
@@ -294,19 +301,20 @@ public:
             // for (auto i = hello_.image_data().begin(); i != hello_.image_data().end(); i++) {
             //     std::cout << *i << ' ';
             // }
-            for (int i = 0; i < 10; i++) 
-                std::cout << hello_.image_data().at(i) << ' ';
-            std::cout<<std::endl;
+
+            // for (int i = 0; i < 10; i++) 
+            //     std::cout << hello_.image_data().at(i) << ' ';
+            // std::cout<<std::endl;
                     
-            unsigned char *encodeImg = new unsigned char[nSize];
+            // unsigned char *encodeImg = new unsigned char[nSize];
 
-            printf("%d\n", nSize);
+            // printf("%d\n", nSize);
 
-            for (int i = 0; i < nSize; i++)
-            {
-                encodeImg[i] = data_encode[i];
-                // std::cout << data_encode[i] << std::endl;
-            }
+            // for (int i = 0; i < nSize; i++)
+            // {
+            //     encodeImg[i] = data_encode[i];
+            //     // std::cout << data_encode[i] << std::endl;
+            // }
             // m_servaddr.sin_family = AF_INET;
             // m_servaddr.sin_port   = htons(PORT_out);
             // m_servaddr.sin_addr.s_addr = htonl(INADDR_ANY);        
@@ -314,16 +322,22 @@ public:
             // char *str = "0123456789"; printf("%.6s\n", str + 1); 
             // printf("%10.10d\n", encodeImg); 
             // cout << encodeImg<<endl;
-            unsigned char file_path[1024]="Do not go gentle into that good night";
             // 会将字符数组当作字符串来输出
             // Notice: 不是输出数组的首地址
             
             // file_path 是一个 char 的地址 即 char* , 所以打印整个 字符串
             // std::cout << file_path << std::endl;
 
-            sendto(m_sockClient, encodeImg, nSize, 0, (const sockaddr*)& m_servaddr, sizeof(m_servaddr));
-            memset(&encodeImg, 0, sizeof(encodeImg));  //初始化结构体
+            // delete for dds begin
+            // sendto(m_sockClient, encodeImg, nSize, 0, (const sockaddr*)& m_servaddr, sizeof(m_servaddr));
+            // delete for dds end
+            // memset(&encodeImg, 0, sizeof(encodeImg));  //初始化结构体
             imshow("image_sento", image);
+
+            // Mat image_1 = Mat::zeros(480, 640, CV_8UC3);
+            // image_1 = imdecode(hello_.picture(), IMREAD_COLOR);//图像解码
+            // imshow("image_recvfrom", image_1);
+
             if(cv::waitKey(100) == 'q') {
                 break;
             }
@@ -334,14 +348,16 @@ public:
             if (publish())
             {
                 samples_sent++;
-                std::cout << "Message: " << hello_.message() << " with index: " << hello_.index()
-                            << " SENT" << std::endl;
+                // std::cout << "Message: " << hello_.message() << " with index: " << hello_.index()
+                //             << " SENT" << std::endl;
+                std::cout << "Message " << hello_.message() << " " << hello_.index() << " RECEIVED" << "Size " << hello_.picture().size()<< std::endl;
                 // for (auto e : hello_.file_path()) {//helloworld
                 //     std::cout << e;
                 // }
                 // std::cout << '\n';
             }
             // std::this_thread::sleep_for(std::chrono::milliseconds(1000));
+            // std::this_thread::sleep_for(std::chrono::milliseconds(100));
         }
     }
 };

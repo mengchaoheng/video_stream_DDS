@@ -116,26 +116,57 @@ private:
             SampleInfo info;
             if (reader->take_next_sample(&hello_, &info) == ReturnCode_t::RETCODE_OK)
             {
-                if (info.valid_data)
+                if (info.instance_state == ALIVE_INSTANCE_STATE)
                 {
                     samples_++;
-                    std::cout << "Message: " << hello_.message() << " with index: " << hello_.index()
-                                << " RECEIVED." << std::endl;
-                    // for (auto e : hello_.file_path()) {//helloworld
-                    //     std::cout << e;
-                    // }
-                    // std::cout << '\n';
-
-                    for (int i = 0; i < 10; i++) 
-                        std::cout << hello_.image_data().at(i) << ' ';
-                    std::cout<<std::endl;
+                    // Print your structure data here.
+                    std::cout << "Message " << hello_.message() << " " << hello_.index() << " RECEIVED" << "Size " << hello_.picture().size()<< std::endl;
+                     
+                    Mat image = imdecode(hello_.picture(), IMREAD_COLOR);//图像解码
+                    imshow("image_recvfrom", image);
+                    if (int key = waitKey(100) >= 0) return;
                 }
+                
+                // add for dds begin
+                // for (int i = 0; i < 10; i++) 
+                //     std::cout << hello_.picture().at(i) << ' ';
+                // std::cout<<std::endl;
+                
+
+                // Mat image_1 = Mat::zeros(480, 640, CV_8UC3);
+                // image_1 = imdecode(hello_.picture(), IMREAD_COLOR);//图像解码
+                // imshow("image_recvfrom", image_1);
+                // add for dds end
             }
+
+            //delete for dds begin
+            // SampleInfo info;
+            // if (reader->take_next_sample(&hello_, &info) == ReturnCode_t::RETCODE_OK)
+            // {
+            //     if (info.valid_data)
+            //     {
+            //         samples_++;
+            //         std::cout << "Message: " << hello_.message() << " with index: " << hello_.index()
+            //                     << " RECEIVED." << std::endl;
+            //         // for (auto e : hello_.file_path()) {//helloworld
+            //         //     std::cout << e;
+            //         // }
+            //         // std::cout << '\n';
+                    
+            //         for (int i = 0; i < 10; i++) 
+            //             std::cout << hello_.image_data().at(i) << ' ';
+            //         std::cout<<std::endl;
+                    
+            //     }
+            // }
+            //delete for dds end
         }
 
         HelloWorld hello_;
 
         std::atomic_int samples_;
+
+        
 
     } listener_;
 
@@ -233,9 +264,14 @@ public:
     void run(
         uint32_t samples)
     {
+        // Mat image = Mat::zeros(480, 640, CV_8UC3);
         while(1)//(listener_.samples_ < samples)
         {
-            // std::this_thread::sleep_for(std::chrono::milliseconds(1000));
+            
+            
+            // image = imdecode(listener_.hello_.picture(), IMREAD_COLOR);//图像解码
+            // imshow("image_recvfrom", image);
+            // std::this_thread::sleep_for(std::chrono::milliseconds(100));
         }
     }
 };
@@ -250,57 +286,70 @@ int main(
     HelloWorldSubscriber* mysub = new HelloWorldSubscriber();
 
     // send video begin
-    int m_sockClient;
-	if ((m_sockClient = socket(AF_INET, SOCK_DGRAM, 0)) < 0)    //创建socket句柄，采用UDP协议
-	{
-		printf("create socket error: %s(errno: %d)\n", strerror(errno), errno);
-		return -1;
-	}
-	sockaddr_in m_servaddr;
-	memset(&m_servaddr, 0, sizeof(m_servaddr));  //初始化结构体
-	m_servaddr.sin_family = AF_INET;           //设置通信方式
-	m_servaddr.sin_port = htons(PORT_out);         //设置端口号
-    m_servaddr.sin_addr.s_addr = htonl(INADDR_ANY);
-    // int len = sizeof(m_servaddr);
+    // int m_sockClient;
+	// if ((m_sockClient = socket(AF_INET, SOCK_DGRAM, 0)) < 0)    //创建socket句柄，采用UDP协议
+	// {
+	// 	printf("create socket error: %s(errno: %d)\n", strerror(errno), errno);
+	// 	return -1;
+	// }
+	// sockaddr_in m_servaddr;
+	// memset(&m_servaddr, 0, sizeof(m_servaddr));  //初始化结构体
+	// m_servaddr.sin_family = AF_INET;           //设置通信方式
+	// m_servaddr.sin_port = htons(PORT_out);         //设置端口号
+    // m_servaddr.sin_addr.s_addr = htonl(INADDR_ANY);
+    // // int len = sizeof(m_servaddr);
 
-	bind(m_sockClient, (sockaddr*)&m_servaddr, sizeof(m_servaddr));//绑定套接字
-	// Mat image;
+	// bind(m_sockClient, (sockaddr*)&m_servaddr, sizeof(m_servaddr));//绑定套接字
+	// // Mat image;
 
-	int imgSize = 480*640*3;
-    Mat image = Mat::zeros(480, 640, CV_8UC3);
-    // uchar *iptr = image.data;
+    // // delete for dds begin
+	// // int imgSize = 480*640*3;
+    // // Mat image = Mat::zeros(480, 640, CV_8UC3);
+    // // delete for dds end
 
+    // // uchar *iptr = image.data;
 
-	unsigned char buf[imgSize+1];
+    // // delete for dds begin
+	// // unsigned char buf[imgSize+1];
+    // // delete for dds end
 
-	struct sockaddr_in addr_client;
-	socklen_t len = sizeof(addr_client);
-	memset(&addr_client, 0, sizeof(addr_client));
-	int key;
+	// struct sockaddr_in addr_client;
+	// socklen_t len = sizeof(addr_client);
+	// memset(&addr_client, 0, sizeof(addr_client));
+	// int key;
     //send video end
 
     if(mysub->init())
     {
-        // mysub->run(static_cast<uint32_t>(samples));
+        mysub->run(static_cast<uint32_t>(samples));
 
         // send video begin
-        while (true)
-        {
-            std::vector<uchar> decode;
+        // while (true)
+        // {
+            // delete for dds begin
+            // std::vector<uchar> decode;
 
-            int n = recvfrom(m_sockClient, buf, imgSize, 0,(struct sockaddr *)&addr_client, (socklen_t *)&len);//接受缓存
-            std::cout << n << std::endl;
-            int pos = 0;
-            while (pos < n)
-            {
-                decode.push_back(buf[pos++]);//存入vector
-            }
-            buf[n] = 0;
-            image = imdecode(decode, IMREAD_COLOR);//图像解码
-            imshow("image_recvfrom", image);
-            if (key = waitKey(100) >= 0) break;
+            // int n = recvfrom(m_sockClient, buf, imgSize, 0,(struct sockaddr *)&addr_client, (socklen_t *)&len);//接受缓存
+            // std::cout << n << std::endl;
+            // int pos = 0;
+            // while (pos < n)
+            // {
+            //     decode.push_back(buf[pos++]);//存入vector
+            // }
+            // buf[n] = 0;
+            // image = imdecode(decode, IMREAD_COLOR);//图像解码
+            // imshow("image_recvfrom", image);
+            // delete for dds end
+
+            
+
+            // for dds begin
+            // std::this_thread::sleep_for(std::chrono::milliseconds(50));
+            // for dds end
+            // if (key = waitKey(100) >= 0) break;
+            
             // waitKey(5);
-        }
+        // }
         //send video end
 
     }
