@@ -34,11 +34,11 @@ If need to update idl file, cd to `workspace_DDSHelloWorld/src` and run:
 fastddsgen -replace HelloWorld.idl
 ```
 # run 
-in build path, run
+In build path, run
 ```
 ./DDSHelloWorldSubscriber
 ```
-and open another terminal (cd to `workspace_DDSHelloWorld/build`) and then run:
+Open another terminal, which can be another computer in the same LAN, run cd to `workspace_DDSHelloWorld/build` and then run:
 ```
 ./DDSHelloWorldPublisher
 ```
