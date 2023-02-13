@@ -133,7 +133,7 @@ public:
         // Increase the sending buffer size
         participantQos.transport().send_socket_buffer_size = 12582912;
         // add for video end
-        participant_ = DomainParticipantFactory::get_instance()->create_participant(0, participantQos);
+        participant_ = DomainParticipantFactory::get_instance()->create_participant(1, participantQos);
 
         if (participant_ == nullptr)
         {

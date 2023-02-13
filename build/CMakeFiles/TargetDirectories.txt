@@ -1,6 +1,6 @@
-/home/parallels/workspace_DDSHelloWorld/build/CMakeFiles/rebuild_cache.dir
-/home/parallels/workspace_DDSHelloWorld/build/CMakeFiles/edit_cache.dir
-/home/parallels/workspace_DDSHelloWorld/build/CMakeFiles/server.dir
-/home/parallels/workspace_DDSHelloWorld/build/CMakeFiles/client.dir
-/home/parallels/workspace_DDSHelloWorld/build/CMakeFiles/DDSHelloWorldSubscriber.dir
-/home/parallels/workspace_DDSHelloWorld/build/CMakeFiles/DDSHelloWorldPublisher.dir
+/home/parallels/video_stream_DDS/build/CMakeFiles/rebuild_cache.dir
+/home/parallels/video_stream_DDS/build/CMakeFiles/edit_cache.dir
+/home/parallels/video_stream_DDS/build/CMakeFiles/server.dir
+/home/parallels/video_stream_DDS/build/CMakeFiles/client.dir
+/home/parallels/video_stream_DDS/build/CMakeFiles/DDSHelloWorldSubscriber.dir
+/home/parallels/video_stream_DDS/build/CMakeFiles/DDSHelloWorldPublisher.dir

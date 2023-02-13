@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/parallels/workspace_DDSHelloWorld
+CMAKE_SOURCE_DIR = /home/parallels/video_stream_DDS
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/parallels/workspace_DDSHelloWorld/build
+CMAKE_BINARY_DIR = /home/parallels/video_stream_DDS/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/DDSHelloWorldSubscriber.dir/depend.make
@@ -59,42 +59,42 @@ include CMakeFiles/DDSHelloWorldSubscriber.dir/flags.make
 
 CMakeFiles/DDSHelloWorldSubscriber.dir/src/HelloWorldSubscriber.cpp.o: CMakeFiles/DDSHelloWorldSubscriber.dir/flags.make
 CMakeFiles/DDSHelloWorldSubscriber.dir/src/HelloWorldSubscriber.cpp.o: ../src/HelloWorldSubscriber.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/parallels/workspace_DDSHelloWorld/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/DDSHelloWorldSubscriber.dir/src/HelloWorldSubscriber.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DDSHelloWorldSubscriber.dir/src/HelloWorldSubscriber.cpp.o -c /home/parallels/workspace_DDSHelloWorld/src/HelloWorldSubscriber.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/parallels/video_stream_DDS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/DDSHelloWorldSubscriber.dir/src/HelloWorldSubscriber.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DDSHelloWorldSubscriber.dir/src/HelloWorldSubscriber.cpp.o -c /home/parallels/video_stream_DDS/src/HelloWorldSubscriber.cpp
 
 CMakeFiles/DDSHelloWorldSubscriber.dir/src/HelloWorldSubscriber.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DDSHelloWorldSubscriber.dir/src/HelloWorldSubscriber.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/parallels/workspace_DDSHelloWorld/src/HelloWorldSubscriber.cpp > CMakeFiles/DDSHelloWorldSubscriber.dir/src/HelloWorldSubscriber.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/parallels/video_stream_DDS/src/HelloWorldSubscriber.cpp > CMakeFiles/DDSHelloWorldSubscriber.dir/src/HelloWorldSubscriber.cpp.i
 
 CMakeFiles/DDSHelloWorldSubscriber.dir/src/HelloWorldSubscriber.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DDSHelloWorldSubscriber.dir/src/HelloWorldSubscriber.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/parallels/workspace_DDSHelloWorld/src/HelloWorldSubscriber.cpp -o CMakeFiles/DDSHelloWorldSubscriber.dir/src/HelloWorldSubscriber.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/parallels/video_stream_DDS/src/HelloWorldSubscriber.cpp -o CMakeFiles/DDSHelloWorldSubscriber.dir/src/HelloWorldSubscriber.cpp.s
 
 CMakeFiles/DDSHelloWorldSubscriber.dir/src/HelloWorld.cxx.o: CMakeFiles/DDSHelloWorldSubscriber.dir/flags.make
 CMakeFiles/DDSHelloWorldSubscriber.dir/src/HelloWorld.cxx.o: ../src/HelloWorld.cxx
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/parallels/workspace_DDSHelloWorld/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/DDSHelloWorldSubscriber.dir/src/HelloWorld.cxx.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DDSHelloWorldSubscriber.dir/src/HelloWorld.cxx.o -c /home/parallels/workspace_DDSHelloWorld/src/HelloWorld.cxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/parallels/video_stream_DDS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/DDSHelloWorldSubscriber.dir/src/HelloWorld.cxx.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DDSHelloWorldSubscriber.dir/src/HelloWorld.cxx.o -c /home/parallels/video_stream_DDS/src/HelloWorld.cxx
 
 CMakeFiles/DDSHelloWorldSubscriber.dir/src/HelloWorld.cxx.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DDSHelloWorldSubscriber.dir/src/HelloWorld.cxx.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/parallels/workspace_DDSHelloWorld/src/HelloWorld.cxx > CMakeFiles/DDSHelloWorldSubscriber.dir/src/HelloWorld.cxx.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/parallels/video_stream_DDS/src/HelloWorld.cxx > CMakeFiles/DDSHelloWorldSubscriber.dir/src/HelloWorld.cxx.i
 
 CMakeFiles/DDSHelloWorldSubscriber.dir/src/HelloWorld.cxx.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DDSHelloWorldSubscriber.dir/src/HelloWorld.cxx.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/parallels/workspace_DDSHelloWorld/src/HelloWorld.cxx -o CMakeFiles/DDSHelloWorldSubscriber.dir/src/HelloWorld.cxx.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/parallels/video_stream_DDS/src/HelloWorld.cxx -o CMakeFiles/DDSHelloWorldSubscriber.dir/src/HelloWorld.cxx.s
 
 CMakeFiles/DDSHelloWorldSubscriber.dir/src/HelloWorldPubSubTypes.cxx.o: CMakeFiles/DDSHelloWorldSubscriber.dir/flags.make
 CMakeFiles/DDSHelloWorldSubscriber.dir/src/HelloWorldPubSubTypes.cxx.o: ../src/HelloWorldPubSubTypes.cxx
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/parallels/workspace_DDSHelloWorld/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/DDSHelloWorldSubscriber.dir/src/HelloWorldPubSubTypes.cxx.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DDSHelloWorldSubscriber.dir/src/HelloWorldPubSubTypes.cxx.o -c /home/parallels/workspace_DDSHelloWorld/src/HelloWorldPubSubTypes.cxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/parallels/video_stream_DDS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/DDSHelloWorldSubscriber.dir/src/HelloWorldPubSubTypes.cxx.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DDSHelloWorldSubscriber.dir/src/HelloWorldPubSubTypes.cxx.o -c /home/parallels/video_stream_DDS/src/HelloWorldPubSubTypes.cxx
 
 CMakeFiles/DDSHelloWorldSubscriber.dir/src/HelloWorldPubSubTypes.cxx.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DDSHelloWorldSubscriber.dir/src/HelloWorldPubSubTypes.cxx.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/parallels/workspace_DDSHelloWorld/src/HelloWorldPubSubTypes.cxx > CMakeFiles/DDSHelloWorldSubscriber.dir/src/HelloWorldPubSubTypes.cxx.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/parallels/video_stream_DDS/src/HelloWorldPubSubTypes.cxx > CMakeFiles/DDSHelloWorldSubscriber.dir/src/HelloWorldPubSubTypes.cxx.i
 
 CMakeFiles/DDSHelloWorldSubscriber.dir/src/HelloWorldPubSubTypes.cxx.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DDSHelloWorldSubscriber.dir/src/HelloWorldPubSubTypes.cxx.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/parallels/workspace_DDSHelloWorld/src/HelloWorldPubSubTypes.cxx -o CMakeFiles/DDSHelloWorldSubscriber.dir/src/HelloWorldPubSubTypes.cxx.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/parallels/video_stream_DDS/src/HelloWorldPubSubTypes.cxx -o CMakeFiles/DDSHelloWorldSubscriber.dir/src/HelloWorldPubSubTypes.cxx.s
 
 # Object files for target DDSHelloWorldSubscriber
 DDSHelloWorldSubscriber_OBJECTS = \
@@ -111,28 +111,61 @@ DDSHelloWorldSubscriber: CMakeFiles/DDSHelloWorldSubscriber.dir/src/HelloWorldPu
 DDSHelloWorldSubscriber: CMakeFiles/DDSHelloWorldSubscriber.dir/build.make
 DDSHelloWorldSubscriber: /home/parallels/Fast-DDS/install/fastrtps/lib/libfastrtps.so.2.10.0
 DDSHelloWorldSubscriber: /home/parallels/Fast-DDS/install/fastcdr/lib/libfastcdr.so.1.0.26
-DDSHelloWorldSubscriber: /usr/local/lib/libopencv_gapi.so.4.7.0
-DDSHelloWorldSubscriber: /usr/local/lib/libopencv_highgui.so.4.7.0
-DDSHelloWorldSubscriber: /usr/local/lib/libopencv_ml.so.4.7.0
-DDSHelloWorldSubscriber: /usr/local/lib/libopencv_objdetect.so.4.7.0
-DDSHelloWorldSubscriber: /usr/local/lib/libopencv_photo.so.4.7.0
-DDSHelloWorldSubscriber: /usr/local/lib/libopencv_stitching.so.4.7.0
-DDSHelloWorldSubscriber: /usr/local/lib/libopencv_video.so.4.7.0
-DDSHelloWorldSubscriber: /usr/local/lib/libopencv_videoio.so.4.7.0
-DDSHelloWorldSubscriber: /home/parallels/Fast-DDS/install/foonathan_memory_vendor/lib/libfoonathan_memory-0.7.3.a
+DDSHelloWorldSubscriber: /usr/lib/aarch64-linux-gnu/libopencv_stitching.so.4.2.0
+DDSHelloWorldSubscriber: /usr/lib/aarch64-linux-gnu/libopencv_aruco.so.4.2.0
+DDSHelloWorldSubscriber: /usr/lib/aarch64-linux-gnu/libopencv_bgsegm.so.4.2.0
+DDSHelloWorldSubscriber: /usr/lib/aarch64-linux-gnu/libopencv_bioinspired.so.4.2.0
+DDSHelloWorldSubscriber: /usr/lib/aarch64-linux-gnu/libopencv_ccalib.so.4.2.0
+DDSHelloWorldSubscriber: /usr/lib/aarch64-linux-gnu/libopencv_dnn_objdetect.so.4.2.0
+DDSHelloWorldSubscriber: /usr/lib/aarch64-linux-gnu/libopencv_dnn_superres.so.4.2.0
+DDSHelloWorldSubscriber: /usr/lib/aarch64-linux-gnu/libopencv_dpm.so.4.2.0
+DDSHelloWorldSubscriber: /usr/lib/aarch64-linux-gnu/libopencv_face.so.4.2.0
+DDSHelloWorldSubscriber: /usr/lib/aarch64-linux-gnu/libopencv_freetype.so.4.2.0
+DDSHelloWorldSubscriber: /usr/lib/aarch64-linux-gnu/libopencv_fuzzy.so.4.2.0
+DDSHelloWorldSubscriber: /usr/lib/aarch64-linux-gnu/libopencv_hdf.so.4.2.0
+DDSHelloWorldSubscriber: /usr/lib/aarch64-linux-gnu/libopencv_hfs.so.4.2.0
+DDSHelloWorldSubscriber: /usr/lib/aarch64-linux-gnu/libopencv_img_hash.so.4.2.0
+DDSHelloWorldSubscriber: /usr/lib/aarch64-linux-gnu/libopencv_line_descriptor.so.4.2.0
+DDSHelloWorldSubscriber: /usr/lib/aarch64-linux-gnu/libopencv_quality.so.4.2.0
+DDSHelloWorldSubscriber: /usr/lib/aarch64-linux-gnu/libopencv_reg.so.4.2.0
+DDSHelloWorldSubscriber: /usr/lib/aarch64-linux-gnu/libopencv_rgbd.so.4.2.0
+DDSHelloWorldSubscriber: /usr/lib/aarch64-linux-gnu/libopencv_saliency.so.4.2.0
+DDSHelloWorldSubscriber: /usr/lib/aarch64-linux-gnu/libopencv_shape.so.4.2.0
+DDSHelloWorldSubscriber: /usr/lib/aarch64-linux-gnu/libopencv_stereo.so.4.2.0
+DDSHelloWorldSubscriber: /usr/lib/aarch64-linux-gnu/libopencv_structured_light.so.4.2.0
+DDSHelloWorldSubscriber: /usr/lib/aarch64-linux-gnu/libopencv_superres.so.4.2.0
+DDSHelloWorldSubscriber: /usr/lib/aarch64-linux-gnu/libopencv_surface_matching.so.4.2.0
+DDSHelloWorldSubscriber: /usr/lib/aarch64-linux-gnu/libopencv_tracking.so.4.2.0
+DDSHelloWorldSubscriber: /usr/lib/aarch64-linux-gnu/libopencv_videostab.so.4.2.0
+DDSHelloWorldSubscriber: /usr/lib/aarch64-linux-gnu/libopencv_viz.so.4.2.0
+DDSHelloWorldSubscriber: /usr/lib/aarch64-linux-gnu/libopencv_xobjdetect.so.4.2.0
+DDSHelloWorldSubscriber: /usr/lib/aarch64-linux-gnu/libopencv_xphoto.so.4.2.0
+DDSHelloWorldSubscriber: /usr/local/lib/libfoonathan_memory-0.7.1.a
 DDSHelloWorldSubscriber: /usr/lib/aarch64-linux-gnu/libtinyxml2.so
 DDSHelloWorldSubscriber: /usr/lib/aarch64-linux-gnu/libtinyxml2.so
 DDSHelloWorldSubscriber: /usr/lib/aarch64-linux-gnu/libssl.so
 DDSHelloWorldSubscriber: /usr/lib/aarch64-linux-gnu/libcrypto.so
-DDSHelloWorldSubscriber: /usr/local/lib/libopencv_imgcodecs.so.4.7.0
-DDSHelloWorldSubscriber: /usr/local/lib/libopencv_dnn.so.4.7.0
-DDSHelloWorldSubscriber: /usr/local/lib/libopencv_calib3d.so.4.7.0
-DDSHelloWorldSubscriber: /usr/local/lib/libopencv_features2d.so.4.7.0
-DDSHelloWorldSubscriber: /usr/local/lib/libopencv_flann.so.4.7.0
-DDSHelloWorldSubscriber: /usr/local/lib/libopencv_imgproc.so.4.7.0
-DDSHelloWorldSubscriber: /usr/local/lib/libopencv_core.so.4.7.0
+DDSHelloWorldSubscriber: /usr/lib/aarch64-linux-gnu/libopencv_highgui.so.4.2.0
+DDSHelloWorldSubscriber: /usr/lib/aarch64-linux-gnu/libopencv_datasets.so.4.2.0
+DDSHelloWorldSubscriber: /usr/lib/aarch64-linux-gnu/libopencv_plot.so.4.2.0
+DDSHelloWorldSubscriber: /usr/lib/aarch64-linux-gnu/libopencv_text.so.4.2.0
+DDSHelloWorldSubscriber: /usr/lib/aarch64-linux-gnu/libopencv_dnn.so.4.2.0
+DDSHelloWorldSubscriber: /usr/lib/aarch64-linux-gnu/libopencv_ml.so.4.2.0
+DDSHelloWorldSubscriber: /usr/lib/aarch64-linux-gnu/libopencv_phase_unwrapping.so.4.2.0
+DDSHelloWorldSubscriber: /usr/lib/aarch64-linux-gnu/libopencv_optflow.so.4.2.0
+DDSHelloWorldSubscriber: /usr/lib/aarch64-linux-gnu/libopencv_ximgproc.so.4.2.0
+DDSHelloWorldSubscriber: /usr/lib/aarch64-linux-gnu/libopencv_video.so.4.2.0
+DDSHelloWorldSubscriber: /usr/lib/aarch64-linux-gnu/libopencv_videoio.so.4.2.0
+DDSHelloWorldSubscriber: /usr/lib/aarch64-linux-gnu/libopencv_imgcodecs.so.4.2.0
+DDSHelloWorldSubscriber: /usr/lib/aarch64-linux-gnu/libopencv_objdetect.so.4.2.0
+DDSHelloWorldSubscriber: /usr/lib/aarch64-linux-gnu/libopencv_calib3d.so.4.2.0
+DDSHelloWorldSubscriber: /usr/lib/aarch64-linux-gnu/libopencv_features2d.so.4.2.0
+DDSHelloWorldSubscriber: /usr/lib/aarch64-linux-gnu/libopencv_flann.so.4.2.0
+DDSHelloWorldSubscriber: /usr/lib/aarch64-linux-gnu/libopencv_photo.so.4.2.0
+DDSHelloWorldSubscriber: /usr/lib/aarch64-linux-gnu/libopencv_imgproc.so.4.2.0
+DDSHelloWorldSubscriber: /usr/lib/aarch64-linux-gnu/libopencv_core.so.4.2.0
 DDSHelloWorldSubscriber: CMakeFiles/DDSHelloWorldSubscriber.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/parallels/workspace_DDSHelloWorld/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable DDSHelloWorldSubscriber"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/parallels/video_stream_DDS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable DDSHelloWorldSubscriber"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/DDSHelloWorldSubscriber.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -145,6 +178,6 @@ CMakeFiles/DDSHelloWorldSubscriber.dir/clean:
 .PHONY : CMakeFiles/DDSHelloWorldSubscriber.dir/clean
 
 CMakeFiles/DDSHelloWorldSubscriber.dir/depend:
-	cd /home/parallels/workspace_DDSHelloWorld/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/parallels/workspace_DDSHelloWorld /home/parallels/workspace_DDSHelloWorld /home/parallels/workspace_DDSHelloWorld/build /home/parallels/workspace_DDSHelloWorld/build /home/parallels/workspace_DDSHelloWorld/build/CMakeFiles/DDSHelloWorldSubscriber.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/parallels/video_stream_DDS/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/parallels/video_stream_DDS /home/parallels/video_stream_DDS /home/parallels/video_stream_DDS/build /home/parallels/video_stream_DDS/build /home/parallels/video_stream_DDS/build/CMakeFiles/DDSHelloWorldSubscriber.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/DDSHelloWorldSubscriber.dir/depend
 

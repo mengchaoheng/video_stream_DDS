@@ -99,7 +99,7 @@ private:
                 {
                     samples_++;
                     // Print your structure data here.
-                    std::cout << "Message " << hello_.message() << " " << hello_.index() << " RECEIVED" << "Size " << hello_.picture().size()<< std::endl;
+                    std::cout <<  hello_.index() << " RECEIVED" << "Size " << hello_.picture().size()<< std::endl;
                      
                     Mat image = imdecode(hello_.picture(), IMREAD_COLOR);//图像解码
                     imshow("image_recvfrom", image);
@@ -165,9 +165,26 @@ public:
         // Increase the receiving buffer size
         participantQos.transport().listen_socket_buffer_size = 12582912;
         participantQos.wire_protocol().builtin.discovery_config.leaseDuration = eprosima::fastrtps::c_TimeInfinite;
+        // // configure an initial peer on host 192.168.10.13.
+        // // The port number corresponds to the well-known port for metatraffic unicast
+        // // on participant ID `1` and domain `0`.
+        // eprosima::fastrtps::rtps::Locator_t initial_peer;
+        // eprosima::fastrtps::rtps::IPLocator::setIPv4(initial_peer, "10.211.55.10");
+        // participantQos.wire_protocol().builtin.initialPeersList.push_back(initial_peer);
+
+        // // This locator will open a socket to listen network messages
+        // // on UDPv4 port 22223 over address 192.168.0.1
+        // eprosima::fastrtps::rtps::Locator_t locator;
+        // eprosima::fastrtps::rtps::IPLocator::setIPv4(locator, 10, 211, 55, 10);
+
+        // // Add the locator to the DomainParticipantQos
+        // participantQos.wire_protocol().builtin.metatrafficUnicastLocatorList.push_back(locator);
+
+        // // Add the locator to the DomainParticipantQos
+        // participantQos.wire_protocol().default_multicast_locator_list.push_back(locator);
         // add for video end
         participantQos.name("Participant_subscriber");
-        participant_ = DomainParticipantFactory::get_instance()->create_participant(0, participantQos);
+        participant_ = DomainParticipantFactory::get_instance()->create_participant(1, participantQos);
 
         if (participant_ == nullptr)
         {

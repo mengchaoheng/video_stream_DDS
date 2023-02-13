@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_FLAGS =   -std=c++11
 
-CXX_DEFINES = -DFOONATHAN_MEMORY=1 -DFOONATHAN_MEMORY_VERSION_MAJOR=0 -DFOONATHAN_MEMORY_VERSION_MINOR=7 -DFOONATHAN_MEMORY_VERSION_PATCH=3
+CXX_DEFINES = -DFOONATHAN_MEMORY=1 -DFOONATHAN_MEMORY_VERSION_MAJOR=0 -DFOONATHAN_MEMORY_VERSION_MINOR=7 -DFOONATHAN_MEMORY_VERSION_PATCH=1
 
-CXX_INCLUDES = -isystem /home/parallels/Fast-DDS/install/fastrtps/include -isystem /home/parallels/Fast-DDS/install/fastcdr/include -isystem /home/parallels/Fast-DDS/install/foonathan_memory_vendor/include/foonathan_memory -isystem /usr/local/include/opencv4 
+CXX_INCLUDES = -isystem /home/parallels/Fast-DDS/install/fastrtps/include -isystem /home/parallels/Fast-DDS/install/fastcdr/include -isystem /usr/local/include/foonathan_memory -isystem /usr/include/opencv4 
 

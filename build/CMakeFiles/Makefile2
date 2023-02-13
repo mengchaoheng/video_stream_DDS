@@ -44,10 +44,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/parallels/workspace_DDSHelloWorld
+CMAKE_SOURCE_DIR = /home/parallels/video_stream_DDS
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/parallels/workspace_DDSHelloWorld/build
+CMAKE_BINARY_DIR = /home/parallels/video_stream_DDS/build
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -80,14 +80,14 @@ clean: CMakeFiles/DDSHelloWorldPublisher.dir/clean
 CMakeFiles/server.dir/all:
 	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/depend
 	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/parallels/workspace_DDSHelloWorld/build/CMakeFiles --progress-num=11,12 "Built target server"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/parallels/video_stream_DDS/build/CMakeFiles --progress-num=11,12 "Built target server"
 .PHONY : CMakeFiles/server.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/server.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/parallels/workspace_DDSHelloWorld/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/parallels/video_stream_DDS/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/server.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/parallels/workspace_DDSHelloWorld/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/parallels/video_stream_DDS/build/CMakeFiles 0
 .PHONY : CMakeFiles/server.dir/rule
 
 # Convenience name for target.
@@ -107,14 +107,14 @@ CMakeFiles/server.dir/clean:
 CMakeFiles/client.dir/all:
 	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/depend
 	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/parallels/workspace_DDSHelloWorld/build/CMakeFiles --progress-num=9,10 "Built target client"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/parallels/video_stream_DDS/build/CMakeFiles --progress-num=9,10 "Built target client"
 .PHONY : CMakeFiles/client.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/client.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/parallels/workspace_DDSHelloWorld/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/parallels/video_stream_DDS/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/client.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/parallels/workspace_DDSHelloWorld/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/parallels/video_stream_DDS/build/CMakeFiles 0
 .PHONY : CMakeFiles/client.dir/rule
 
 # Convenience name for target.
@@ -134,14 +134,14 @@ CMakeFiles/client.dir/clean:
 CMakeFiles/DDSHelloWorldSubscriber.dir/all:
 	$(MAKE) -f CMakeFiles/DDSHelloWorldSubscriber.dir/build.make CMakeFiles/DDSHelloWorldSubscriber.dir/depend
 	$(MAKE) -f CMakeFiles/DDSHelloWorldSubscriber.dir/build.make CMakeFiles/DDSHelloWorldSubscriber.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/parallels/workspace_DDSHelloWorld/build/CMakeFiles --progress-num=5,6,7,8 "Built target DDSHelloWorldSubscriber"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/parallels/video_stream_DDS/build/CMakeFiles --progress-num=5,6,7,8 "Built target DDSHelloWorldSubscriber"
 .PHONY : CMakeFiles/DDSHelloWorldSubscriber.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/DDSHelloWorldSubscriber.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/parallels/workspace_DDSHelloWorld/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/parallels/video_stream_DDS/build/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/DDSHelloWorldSubscriber.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/parallels/workspace_DDSHelloWorld/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/parallels/video_stream_DDS/build/CMakeFiles 0
 .PHONY : CMakeFiles/DDSHelloWorldSubscriber.dir/rule
 
 # Convenience name for target.
@@ -161,14 +161,14 @@ CMakeFiles/DDSHelloWorldSubscriber.dir/clean:
 CMakeFiles/DDSHelloWorldPublisher.dir/all:
 	$(MAKE) -f CMakeFiles/DDSHelloWorldPublisher.dir/build.make CMakeFiles/DDSHelloWorldPublisher.dir/depend
 	$(MAKE) -f CMakeFiles/DDSHelloWorldPublisher.dir/build.make CMakeFiles/DDSHelloWorldPublisher.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/parallels/workspace_DDSHelloWorld/build/CMakeFiles --progress-num=1,2,3,4 "Built target DDSHelloWorldPublisher"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/parallels/video_stream_DDS/build/CMakeFiles --progress-num=1,2,3,4 "Built target DDSHelloWorldPublisher"
 .PHONY : CMakeFiles/DDSHelloWorldPublisher.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/DDSHelloWorldPublisher.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/parallels/workspace_DDSHelloWorld/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/parallels/video_stream_DDS/build/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/DDSHelloWorldPublisher.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/parallels/workspace_DDSHelloWorld/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/parallels/video_stream_DDS/build/CMakeFiles 0
 .PHONY : CMakeFiles/DDSHelloWorldPublisher.dir/rule
 
 # Convenience name for target.
