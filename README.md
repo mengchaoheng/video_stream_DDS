@@ -1,5 +1,5 @@
 # video_stream_DDS
-This is a demo of real-time video transmission through Fast DDS, which have been test on ubuntu20.04. The effect of this demo is to acquire the image from the camera and transmit it through dds, and then display it.
+This is a demo of real-time video transmission through Fast DDS betwrrn WAN and LAN, which have been test on ubuntu20.04. The effect of this demo is to acquire the image from the camera and transmit it through dds, and then display it.
 
 This demo is modified based on 
 server/client of [opencv_tcp_udp_video_test](https://github.com/mengchaoheng/opencv_tcp_udp_video_test.git) and [publish/subscribe](https://fast-dds.docs.eprosima.com/en/latest/fastddsgen/pubsub_app/pubsub_app.html#) 
