@@ -33,9 +33,9 @@ If need to update idl file, cd to `video_stream_DDS/src` and run:
 ```
 fastddsgen -replace HelloWorld.idl
 ```
-## run 
+# run 
 
-# LAN
+## LAN
 
 In build path, run
 ```
@@ -45,7 +45,7 @@ Open another terminal, which can be another computer in the same LAN, run cd to 
 ```
 ./DDSHelloWorldPublisher
 ```
-# WAN
+## WAN
 In order to explain my scenario I use a parallels virtual machine for illustration, his virtual machine network has [Bridged Network and Shared Networking](https://kb.parallels.com/4948) mode, when I set up two virtual machines working in these two modes to use dds router to communicate,.
 
 1.Computer IP:192.168.0.4
