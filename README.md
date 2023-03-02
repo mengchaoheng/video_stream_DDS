@@ -20,9 +20,11 @@ having a 100% lossless transmission:
 ```
 
 #  Prerequisites
-- install [opencv4.7.0](https://docs.opencv.org/4.7.0/d7/d9f/tutorial_linux_install.html)
+- Install [opencv4.7.0](https://docs.opencv.org/4.7.0/d7/d9f/tutorial_linux_install.html)
 
-- install [fast DDS and Fast DDS-Gen](https://fast-dds.docs.eprosima.com/en/latest/installation/sources/sources_linux.html#cmake-installation), note that CMake installation locally is good. 
+- Install [fast DDS and Fast DDS-Gen](https://fast-dds.docs.eprosima.com/en/latest/installation/sources/sources_linux.html#cmake-installation), note that CMake installation locally is good. 
+
+- If run between WAN, need to install [DDS-Router](https://github.com/eProsima/DDS-Router). If just use in the same LAN, it is not necessary.
 
 # build
 cd to `video_stream_DDS/build` path and:
