@@ -36,6 +36,11 @@ fastddsgen -replace HelloWorld.idl
 # run 
 
 ## LAN
+Make sure the domain ID is the same:
+```
+participant_ = DomainParticipantFactory::get_instance()->create_participant(0, participantQos);
+
+```
 
 In build path, run
 ```
