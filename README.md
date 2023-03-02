@@ -51,13 +51,16 @@ In order to explain my scenario I use a parallels virtual machine for illustrati
 1.Computer IP:192.168.0.4
 
 2.one vm is Bridged Network, note as PC1, bridged network, and IP is 192.168.0.5
+
 ![image](src/Bridged.png)
 
 3.another vm PC2 is Shared networking, and IP is 10.211.55.2
+
 ![image](src/Shared.png)
 
 The communication between PC1 and PC2 belongs to WAN communication, and port mapping is required so that the public ip can access the private ip. A simple understanding is that port mapping needs to be traversed until the two PCs can be in the same subnet and can access each other. What is special here is that PC2 can access PC1, but PC1 cannot access PC2 (private ip). So you only need to do port mapping on PC2 to access the private ip. Here the port mapping is set to:
 Map PC2's wan ip 192.168.0.4 port 11666 to PC2's lan ip 10.211.55.2
+
 ![image](src/map.png)
 
 On PC1, the wan_client.yaml is:
