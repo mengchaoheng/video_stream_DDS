@@ -104,6 +104,8 @@ participants:
         transport: udp                                            
 ```
 
+After build the code, running step is:
+
 1. On PC1, cd to `video_stream_DDS/src/ddsrouter_config` then run 
 ```
 ddsrouter -c wan_client.yaml
@@ -112,7 +114,6 @@ and on the new terminal, cd to `video_stream_DDS/build` and then run:
 ```
 ./DDSHelloWorldPublisher
 ```
-
 
 2. On PC2, cd to `video_stream_DDS/src/ddsrouter_config` then run 
 ```
