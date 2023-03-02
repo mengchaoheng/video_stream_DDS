@@ -27,7 +27,7 @@ having a 100% lossless transmission:
 # build
 cd to `video_stream_DDS/build` path and:
 ```
-$ cmake .. && cmake --build . -j8
+cmake .. && cmake --build . -j8
 ```
 If need to update idl file, cd to `video_stream_DDS/src` and run:
 ```
@@ -41,6 +41,7 @@ Make sure the domain ID is the same:
 participant_ = DomainParticipantFactory::get_instance()->create_participant(0, participantQos);
 
 ```
+and then build the code `cmake .. && cmake --build . -j8`
 
 In build path, run
 ```
@@ -55,11 +56,11 @@ In order to explain my scenario I use a parallels virtual machine for illustrati
 
 1.Computer IP:192.168.0.4
 
-2.one vm is Bridged Network, note as PC1, bridged network, and IP is 192.168.0.5
+2.one vm is Bridged Network, note as PC1, bridged network, and IP is 192.168.0.5, domain ID is 0.
 
 ![image](src/Bridged.png)
 
-3.another vm PC2 is Shared networking, and IP is 10.211.55.2
+3.another vm PC2 is Shared networking, and IP is 10.211.55.2, domain ID is 1.
 
 ![image](src/Shared.png)
 
@@ -113,7 +114,7 @@ and on the new terminal, cd to `video_stream_DDS/build` and then run:
 ```
 
 
-2. On PC1, cd to `video_stream_DDS/src/ddsrouter_config` then run 
+2. On PC2, cd to `video_stream_DDS/src/ddsrouter_config` then run 
 ```
 ddsrouter -c wan_server.yaml
 ```
