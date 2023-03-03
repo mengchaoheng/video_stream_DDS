@@ -1,4 +1,6 @@
 # video_stream_DDS
+![gif](src/dds-lan.gif)
+
 This is a demo of real-time video transmission through Fast DDS between WAN and LAN, which have been test on ubuntu20.04. The effect of this demo is to acquire the image from the camera and transmit it through dds, and then display it.
 
 This demo is modified based on 
@@ -21,16 +23,11 @@ having a 100% lossless transmission:
 
 
 The network include two situation:
-
 ## LAN
 ![image](src/router_two_PC.png)
 
 ## WAN
-
 ![image](src/two_router_two_PC.png)
-## result
-![gif](src/dds-lan.gif)
-
 
 #  Prerequisites
 - Install [opencv4.7.0](https://docs.opencv.org/4.7.0/d7/d9f/tutorial_linux_install.html)
