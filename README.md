@@ -19,6 +19,19 @@ having a 100% lossless transmission:
 - note: In the case of video, depth can be as low as 1. A missing sample of a 50 frames per second stream represents virtually no information loss. 
 ```
 
+
+The network include two situation:
+
+## LAN
+![image](src/router_two_PC.png)
+
+## WAN
+
+![image](src/two_router_two_PC.png)
+## result
+![gif](src/dds-lan.gif)
+
+
 #  Prerequisites
 - Install [opencv4.7.0](https://docs.opencv.org/4.7.0/d7/d9f/tutorial_linux_install.html)
 
